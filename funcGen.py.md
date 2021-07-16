@@ -1,3 +1,11 @@
+# funcGen.py
+
+
+
+### Código fuente
+
+
+```python
 import numpy as np
 import scipy.signal as sc
 import matplotlib.pyplot as plt
@@ -24,10 +32,25 @@ def sigSquare(f,T):
     y = sc.square(2*pi*x,0.5)
     return y
 
-def senoidal(f0,fs,N):
-    """ Usage example plt.plot(senoidal(0.1*1e3,1e3,100));plt.show() """
-    x = np.arange(0,N/fs,1/fs)
-    y = np.sin(2*pi*x)
-    return y
 
 
+```
+
+### Ejemplos
+
+```python
+plt.plot(sigSin(1e3,10));plt.show()
+```
+
+<img src="Pics/sin.png">
+
+```python
+plt.plot(sigTrian(1e3,10));plt.show()
+```
+
+<img src="Pics/trian.png">
+
+```python
+plt.plot(sigSquare(1e3,20));plt.show()
+```
+<img src="Pics/square.png">
